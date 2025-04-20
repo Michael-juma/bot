@@ -8,7 +8,7 @@ export default function BotCollection() {
 
 
   useEffect(() => {
-    fetch("http://localhost:3001/bots")
+    fetch("http://localhost:5000/bots")
       .then((res) => res.json())
       .then((data) => setCards(data))
       .catch((error) => console.error("Error fetching bots:", error));
@@ -22,7 +22,7 @@ export default function BotCollection() {
     );
 
     
-    fetch(`http://localhost:3001/likes`, {
+    fetch(`http://localhost:5000/likes`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -64,7 +64,7 @@ export default function BotCollection() {
                   <p className="text-muted">{card.bot_class}</p>
 
                   <p className="small mb-2">
-                    ❤️ Health: {card.health} | 🛡 Armor: {card.armor} | ⚔️ Damage: {card.damage}
+                    ❤️: {card.health} | 🛡: {card.armor} | ⚔️ : {card.damage}
                   </p>
 
                   <p className="fst-italic text-muted small">

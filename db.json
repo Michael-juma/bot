@@ -27,7 +27,7 @@
       "damage": 45,
       "armor": 50,
       "bot_class": "Assault",
-      "catchphrase": "We strike fast and leave no trace.",
+      "catchphrase": "0110101100001011000110000111101",
       "avatar_url": "https://robohash.org/suntdebitisvoluptatum.png?size=300x300&set=set1"
     },
     {
@@ -37,30 +37,10 @@
       "damage": 15,
       "armor": 90,
       "bot_class": "Tank",
-      "catchphrase": "Hold the line at all costs.",
+      "catchphrase": "0110101010001011000110000111101",
       "avatar_url": "https://robohash.org/laborealiquamsint.png?size=300x300&set=set1"
     }
   ],
-  "likes": [
-    {
-      "id": "4ee3",
-      "botId": "101",
-      "liked": true
-    },
-    {
-      "id": "e453",
-      "botId": "103",
-      "liked": true
-    },
-    {
-      "id": "1a9e",
-      "botId": "102",
-      "liked": true
-    },
-    {
-      "id": "c4d3",
-      "botId": "104",
-      "liked": true
-    }
-  ]
+  "likes": []    
+  
 }
