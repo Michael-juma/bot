@@ -2,7 +2,7 @@ import React from "react";
 
 export default function BotTable({ selectedCards, onRemove }) {
   return (
-    <div className="container mt-4">
+    <div className="container mt-4 bg bg-info">
       <h4 className="mb-3">Your Bot Army</h4>
       <div className="row">
         {selectedCards.map((card) => (
