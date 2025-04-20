@@ -1,0 +1,66 @@
+{
+  "bots": [
+    {
+      "id": "101",
+      "name": "wHz-93",
+      "health": 94,
+      "damage": 20,
+      "armor": 63,
+      "bot_class": "Support",
+      "catchphrase": "1010010101001101100011000111101",
+      "avatar_url": "https://robohash.org/nostrumrepellendustenetur.png?size=300x300&set=set1"
+    },
+    {
+      "id": "102",
+      "name": "RyM-66",
+      "health": 86,
+      "damage": 36,
+      "armor": 77,
+      "bot_class": "Medic",
+      "catchphrase": "0110011100000100011110100110011000011001",
+      "avatar_url": "https://robohash.org/quidemconsequaturaut.png?size=300x300&set=set1"
+    },
+    {
+      "id": "103",
+      "name": "K4T-22",
+      "health": 78,
+      "damage": 45,
+      "armor": 50,
+      "bot_class": "Assault",
+      "catchphrase": "We strike fast and leave no trace.",
+      "avatar_url": "https://robohash.org/suntdebitisvoluptatum.png?size=300x300&set=set1"
+    },
+    {
+      "id": "104",
+      "name": "X9B-88",
+      "health": 99,
+      "damage": 15,
+      "armor": 90,
+      "bot_class": "Tank",
+      "catchphrase": "Hold the line at all costs.",
+      "avatar_url": "https://robohash.org/laborealiquamsint.png?size=300x300&set=set1"
+    }
+  ],
+  "likes": [
+    {
+      "id": "4ee3",
+      "botId": "101",
+      "liked": true
+    },
+    {
+      "id": "e453",
+      "botId": "103",
+      "liked": true
+    },
+    {
+      "id": "1a9e",
+      "botId": "102",
+      "liked": true
+    },
+    {
+      "id": "c4d3",
+      "botId": "104",
+      "liked": true
+    }
+  ]
+}
