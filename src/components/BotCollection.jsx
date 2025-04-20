@@ -6,7 +6,7 @@ export default function BotCollection() {
   const [likedCards, setLikedCards] = useState([]);
   const [selectedCards, setSelectedCards] = useState([]);
 
-  // Fetch bots
+  
   useEffect(() => {
     fetch("http://localhost:8001/bots")
       .then((res) => res.json())
@@ -14,7 +14,7 @@ export default function BotCollection() {
       .catch((error) => console.error("Error fetching bots:", error));
   }, []);
 
-  // Toggle Like
+  
   const toggleLike = (id) => {
     const isLiked = likedCards.includes(id);
     setLikedCards((prev) =>
@@ -30,14 +30,14 @@ export default function BotCollection() {
     });
   };
 
-  // Add bot to army
+  
   const handleCardClick = (card) => {
     if (!selectedCards.find((c) => c.id === card.id)) {
       setSelectedCards([...selectedCards, card]);
     }
   };
 
-  // Remove bot from army
+
   const handleRemoveFromArmy = (bot) => {
     setSelectedCards((prev) => prev.filter((c) => c.id !== bot.id));
   };
