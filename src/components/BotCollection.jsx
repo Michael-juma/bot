@@ -6,23 +6,22 @@ export default function BotCollection() {
   const [likedCards, setLikedCards] = useState([]);
   const [selectedCards, setSelectedCards] = useState([]);
 
-
+  // Fetch bots
   useEffect(() => {
-    fetch("http://localhost:5000/bots")
+    fetch("http://localhost:8001/bots")
       .then((res) => res.json())
       .then((data) => setCards(data))
       .catch((error) => console.error("Error fetching bots:", error));
   }, []);
 
-
+  // Toggle Like
   const toggleLike = (id) => {
     const isLiked = likedCards.includes(id);
     setLikedCards((prev) =>
       isLiked ? prev.filter((cardId) => cardId !== id) : [...prev, id]
     );
 
-    
-    fetch(`http://localhost:5000/likes`, {
+    fetch(`http://localhost:8001/likes`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -31,10 +30,16 @@ export default function BotCollection() {
     });
   };
 
+  // Add bot to army
   const handleCardClick = (card) => {
     if (!selectedCards.find((c) => c.id === card.id)) {
       setSelectedCards([...selectedCards, card]);
     }
+  };
+
+  // Remove bot from army
+  const handleRemoveFromArmy = (bot) => {
+    setSelectedCards((prev) => prev.filter((c) => c.id !== bot.id));
   };
 
   return (
@@ -64,7 +69,7 @@ export default function BotCollection() {
                   <p className="text-muted">{card.bot_class}</p>
 
                   <p className="small mb-2">
-                    ❤️: {card.health} | 🛡: {card.armor} | ⚔️ : {card.damage}
+                    ❤️: {card.health} | 🛡: {card.armor} | ⚔️: {card.damage}
                   </p>
 
                   <p className="fst-italic text-muted small">
@@ -89,7 +94,9 @@ export default function BotCollection() {
         })}
       </div>
 
-      {selectedCards.length > 0 && <BotTable selectedCards={selectedCards} />}
+      {selectedCards.length > 0 && (
+        <BotTable selectedCards={selectedCards} onRemove={handleRemoveFromArmy} />
+      )}
     </div>
   );
 }

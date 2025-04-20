@@ -1,32 +1,31 @@
 import React from "react";
 
-export default function BotTable({ selectedCards }) {
+export default function BotTable({ selectedCards, onRemove }) {
   return (
-    <div className="mt-5">
-      <h4>Your Bot Army</h4>
-
-      <div className="d-flex flex-wrap gap-4 mt-3 justify-content-start">
-        {selectedCards.map((bot) => (
+    <div className="container mt-4">
+      <h4 className="mb-3">Your Bot Army</h4>
+      <div className="row">
+        {selectedCards.map((card) => (
           <div
-            key={bot.id}
-            className="card shadow-sm"
-            style={{ width: "250px" }}
+            key={card.id}
+            className="col-md-3"
+            onClick={() => onRemove(card)}
+            style={{ cursor: "pointer" }}
           >
-            <img
-              src={bot.avatar_url}
-              alt={bot.name}
-              className="card-img-top"
-              style={{ height: "200px", objectFit: "cover" }}
-            />
-            <div className="card-body text-center">
-              <h5 className="card-title">{bot.name}</h5>
-              <p className="card-text"><em>{bot.bot_class}</em></p>
-              <p className="card-text small text-muted">
-                <strong>Health:</strong> {bot.health} <br />
-                <strong>Damage:</strong> {bot.damage} <br />
-                <strong>Armor:</strong> {bot.armor}
-              </p>
-              <p className="card-text"><q>{bot.catchphrase}</q></p>
+            <div className="card mb-4 h-100 shadow-sm">
+              <img
+                src={card.avatar_url}
+                className="card-img-top"
+                alt={card.name}
+                style={{ height: "200px", objectFit: "cover" }}
+              />
+              <div className="card-body">
+                <h5 className="card-title">{card.name}</h5>
+                <p className="text-muted">{card.bot_class}</p>
+                <p className="small">
+                  ❤️: {card.health} | 🛡: {card.armor} | ⚔️ : {card.damage}
+                </p>
+              </div>
             </div>
           </div>
         ))}
