@@ -39,8 +39,48 @@
       "bot_class": "Tank",
       "catchphrase": "0110101010001011000110000111101",
       "avatar_url": "https://robohash.org/laborealiquamsint.png?size=300x300&set=set1"
+    },
+    {
+      "id": "105",
+      "name": "Z3N-07",
+      "health": 65,
+      "damage": 50,
+      "armor": 40,
+      "bot_class": "Scout",
+      "catchphrase": "0101010000111110000111101101",
+      "avatar_url": "https://robohash.org/robot1.png?size=300x300&set=set1"
+    },
+    {
+      "id": "106",
+      "name": "A1X-42",
+      "health": 72,
+      "damage": 30,
+      "armor": 85,
+      "bot_class": "Defender",
+      "catchphrase": "0011010111001110110100101",
+      "avatar_url": "https://robohash.org/robot2.png?size=300x300&set=set1"
+    },
+    {
+      "id": "107",
+      "name": "J9Q-19",
+      "health": 88,
+      "damage": 60,
+      "armor": 35,
+      "bot_class": "Blaster",
+      "catchphrase": "1101010110010010100011110",
+      "avatar_url": "https://robohash.org/robot3.png?size=300x300&set=set1"
+    },
+    {
+      "id": "108",
+      "name": "L0R-01",
+      "health": 90,
+      "damage": 20,
+      "armor": 60,
+      "bot_class": "Engineer",
+      "catchphrase": "1011010100010100111100",
+      "avatar_url": "https://robohash.org/robot4.png?size=300x300&set=set1"
     }
+    
   ],
-  "likes": []    
-  
+  "likes": []
 }

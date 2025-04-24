@@ -8,7 +8,7 @@ export default function BotCollection() {
 
   
   useEffect(() => {
-    fetch("http://localhost:8001/bots")
+    fetch("http://localhost:8000/bots")
       .then((res) => res.json())
       .then((data) => setCards(data))
       .catch((error) => console.error("Error fetching bots:", error));
@@ -21,7 +21,7 @@ export default function BotCollection() {
       isLiked ? prev.filter((cardId) => cardId !== id) : [...prev, id]
     );
 
-    fetch(`http://localhost:8001/likes`, {
+    fetch(`http://localhost:8000/likes`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
